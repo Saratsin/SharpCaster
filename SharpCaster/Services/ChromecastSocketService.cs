@@ -19,7 +19,8 @@ namespace SharpCaster.Services
             await _client.ConnectAsync(host, int.Parse(port), true, cancellationToken, true);
 
             await connectionChannel.OpenConnection();
-            heartbeatChannel.StartHeartbeat();
+
+			heartbeatChannel.StartHeartbeat();
 
             await Task.Run(async () =>
             {

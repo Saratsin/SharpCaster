@@ -19,17 +19,17 @@ namespace SharpCaster
             DiscoveredDevices = new ObservableCollection<Chromecast>();
         }
 
-        public async Task<ObservableCollection<Chromecast>> LocateDevicesAsync()
+        public Task<ObservableCollection<Chromecast>> LocateDevicesAsync()
         {
-            return await LocateDevicesAsync(new SsdpDeviceLocator());
+            return LocateDevicesAsync(new SsdpDeviceLocator());
         }
 
-        public async Task<ObservableCollection<Chromecast>> LocateDevicesAsync(string localIpAdress)
+        public Task<ObservableCollection<Chromecast>> LocateDevicesAsync(string localIpAdress)
         {
-            return await LocateDevicesAsync(new SsdpDeviceLocator(new SsdpCommunicationsServer(new SocketFactory(localIpAdress))));
+            return LocateDevicesAsync(new SsdpDeviceLocator(new SsdpCommunicationsServer(new SocketFactory(localIpAdress))));
         }
 
-        private async Task<ObservableCollection<Chromecast>> LocateDevicesAsync(SsdpDeviceLocator deviceLocator)
+        async Task<ObservableCollection<Chromecast>> LocateDevicesAsync(SsdpDeviceLocator deviceLocator)
         {
             using (deviceLocator)
             {

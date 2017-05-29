@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System.Dynamic;
+using System.IO;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using ProtoBuf;
 using SharpCaster.Extensions;
 
@@ -39,16 +41,16 @@ namespace SharpCaster.Models
         [ProtoMember(7, IsRequired = false, Name = "payload_binary")]
         public byte[] PayloadBinary;
 
-        public string GetJsonType()
-        {
-            if (string.IsNullOrEmpty(PayloadUtf8))
-            {
-                return string.Empty;
-            }
+		public string GetJsonType()
+		{
+			if (string.IsNullOrEmpty(PayloadUtf8))
+			{
+				return string.Empty;
+			}
 
-            dynamic stuff = JsonConvert.DeserializeObject(PayloadUtf8);
+			dynamic stuff = JsonConvert.DeserializeObject(PayloadUtf8);
 
-            return stuff.type;
+			return stuff["type"].ToString();
         }
 
         public byte[] ToProto(bool includeHeader = true)
