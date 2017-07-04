@@ -115,7 +115,7 @@
     <Compile Include="Services\ChromecastSocketService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="protobuf-net-sharpcaster">
       <HintPath>..\..\..\packages\protobuf-net-sharpcaster.2.0.0.668\lib\portable46-net451+win81+wpa81\protobuf-net.dll</HintPath>
       <Private>True</Private>
     </Reference>

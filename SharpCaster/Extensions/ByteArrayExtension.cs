@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using ProtoBuf;
 using SharpCaster.Models;
+using ProtoBuf;
 
 namespace SharpCaster.Extensions
 {

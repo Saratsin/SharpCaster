@@ -1,9 +1,7 @@
-﻿using System.Dynamic;
-using System.IO;
+﻿using System.IO;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using ProtoBuf;
 using SharpCaster.Extensions;
+using ProtoBuf;
 
 namespace SharpCaster.Models
 {
