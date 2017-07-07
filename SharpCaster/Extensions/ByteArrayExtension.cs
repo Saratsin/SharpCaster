@@ -26,7 +26,7 @@ namespace SharpCaster.Extensions
                 var msg = Serializer.Deserialize<CastMessage>(bufStream);
                 return msg;
             }
-            catch (Exception)
+            catch
             {
                 return null;
             }
