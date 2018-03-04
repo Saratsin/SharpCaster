@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Tmds.MDns" Version="0.6.0" />
+    <PackageReference Include="Tmds.MDns" Version="0.7.0" />
   </ItemGroup>
 
   <ItemGroup>
