@@ -91,7 +91,7 @@ namespace Sharpcaster.Discovery
         }
 
         #region IDisposable Support
-        private bool _disposed = false; // To detect redundant calls
+        private bool _disposed = false;
 
         protected virtual void Dispose(bool disposing)
         {
