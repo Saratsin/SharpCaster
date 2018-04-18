@@ -6,9 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sharpcaster.Core\Sharpcaster.Core.csproj" />
+    <ProjectReference Include="..\Submodules\Tmds.MDns\src\Tmds.MDns\Tmds.MDns.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Tmds.MDns" Version="0.7.0" />
-  </ItemGroup>
 </Project>
